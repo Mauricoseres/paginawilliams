@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESA OPERATIVA</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <style>
+        .hide {
+            display: none;
+        }
+        #miniLogo { margin-top: 5px; margin-bottom: 5px;}
+        .col label {text-align: right !important; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 8px !important;}        
+        .separo {margin: 0 5px;}
+    </style>
+</head>
+<body>
+    <nav>
+		<ul class="menu-horizontal">
+		    
+			<li><a href="#">Datos acond.</a>
+			<ul class="menu-vertical">
+					<li><a href="Acondicionadoras/Datos Pto Arroyo Seco.html">Pto arroyo seco </a></li>
+					<li><a href="Acondicionadoras/Datos Proteisol.html">Proteisol </a></li>
+					<li><a href="Acondicionadoras/Datos seac.html">Seac srl </a></li>
+					
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">Estandares</a>
+				<ul class="menu-vertical">
+					<li><a href="Estandares/maiz.html">Maiz</a></li>
+					<li><a href="Estandares/Trigo.html">Trigo</a></li>
+					<li><a href="Estandares/soja.pdf">Soja</a></li>
+                    <li><a href="Estandares/Sorgo.html">Sorgo</a></li>
+                    <li><a href="Estandares/cebada.html">Cebada</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Planillas Utiles</a>
+				<ul class="menu-vertical">
+                    <li><a href="Planillas/tipos de camiones.html">Tipos de camiones</a></li>
+                    <li><a href="Planillas/horarios.html">Horarios y direcciones de terminales </a></li>
+					<li><a href="Planillas/acondicionadoras.html">Acondicionadoras</a></li>
+					<li><a href="Planillas/Tarifas en puertos.html">Tarifas en terminales</a></li>
+                    <li><a href="Planillas/manual redestinar.html">Manual redestinar</a></li>
+                    <li><a href="Planillas/editarcpe.html">Editar cpe</a></li>
+					<li><a href="Planillas/CPE IMRESAS Y EN CELULAR EN TERMINALES ACT 12-08.pdf">Recibo de cp en terminales</a></li>
+					<li><a href="Planillas/COTEJO CON FIRMA EDITABLE.pdf">Cotejo editable</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">Paginas Utiles</a>
+				<ul class="menu-vertical">
+                    <li><a href="https://www.afip.gob.ar/landing/default.asp">AFIP</a></li>
+                    <li><a href="https://www.cac.bcr.com.ar/es/arbitraje-y-calidad/liquidacion-y-mermas/liquidacion-de-mercaderia">BRC Liquidacion </a></li>
+					<li><a href="https://www.cac.bcr.com.ar/es/arbitraje-y-calidad/liquidacion-y-mermas/merma-por-humedad">BCR Merma/Humedad</a></li>
+					<li><a href="https://prontonet.williamsentregas.com.ar/Account/Login">Williams Pronto</a></li>
+                  
+				</ul>
+			</li>
+			<li><a href="/Anotador/anotador.html">Anotador</a></li>
+			<li><a href="/photo editing web application/index.html">Editor</a></li>
+
+		</ul>
+	</nav>
+    <div class="container">
+        <div class="card p-4 mx-auto hide" style="max-width: 70%;" id="formulario" >
+            <div class="form-group">
+                <textarea id="data" cols="20" rows="2" class="form-control"></textarea>
+            </div>
+            <div class="form-group mt-3 d-flex justify-content-end">
+                <button type="button" id="copiar" class="btn btn-success btn-block " >Copiar al formulario</button>
+            </div>
+            <div class="form-group mt-3 hide">
+                <button type="button" id="send" class="btn btn-success btn-block " >Aceptar</button>
+                <a id="captura" class="btn btn-success btn-block " >Captura</a>
+            </div>
+        </div>
+        <!--INICIO FORMULARIO-->
+        <div id="individual" class="container col-sm-8">
+            <img id="miniLogo" src="logo.jpg" width="100%"/>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtNumeroCarta">Número de carta</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtNumeroCarta" id="txtNumeroCarta" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtCTG">C.T.G</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtCTG" id="txtCTG" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtEstado">Estado</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtEstado" id="txtEstado" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtProducto">Producto</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtProducto" id="txtProducto" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtTitular">Titular</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtTitular" id="txtTitular" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtRemitente">Remitente comercial</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtRemitente" id="txtRemitente" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtIntermediario">Rem. com. Venta Primaria</label>   <!-- Antes era intermediario, queda en los controles para no cambiar el resto del comportamiento-->
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtIntermediario" id="txtIntermediario" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtRemVtaSecundaria">Rem. com. Venta Secundaria</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtRemVtaSecundaria" id="txtRemVtaSecundaria" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtCorredor">Corredor</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtCorredor" id="txtCorredor" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtProcedencia">Procedencia</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtProcedencia" id="txtProcedencia" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtDestino">Destino</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtDestino" id="txtDestino" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtPatente">Patente</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtPatente" id="txtPatente" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtCalidad">Calidad</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" name="txtCalidad" id="txtCalidad" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <label class="control-label" for="txtObservaciones">Observaciones</label>
+                </div>
+                <div class="col-lg-8" id="conflictivo">
+                    <textarea id="txtObservaciones" style="resize:none" cols="20" rows="6" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+        <!--FIN FORMULARIO-->
+    </div>
+
+    <div class="container">
+        <div class="p-4 mx-auto d-flex justify-content-end" style="max-width: 70%;">
+            <a id="btnPegar" class="btn btn-success btn-block separo" >Pegar desde portapapeles</a>
+            <!--<a id="btnAgregar" class="btn btn-success btn-block separo" >Agregar</a>-->
+            <a id="btnCapturarInd" class="btn btn-success btn-block separo" >Copiar esta carta</a>
+            <!--<a id="btnCapturarGrilla" class="btn btn-success btn-block separo" >Copiar tabla</a>-->
+        </div>
+    </div>
+
+    <!--<div class="mt-3" id="tabla" style="border-color: black; border-width: 5px;">
+        <div id="logo" style="margin: 0; padding: 0;"></div>
+        <table id="tabladatos" class="table table-bordered border-primary text-center" onresize="asd()">
+            <thead class="table-dark" >
+                <tr>
+                    <th>
+                        <strong>N° de Carta</strong>
+                    </th>
+                    <th>
+                        <strong>C.T.G.</strong>
+                    </th>
+                    <th>
+                        <strong>Estado</strong>
+                    </th>
+                    <th>
+                        <strong>Producto</strong>
+                    </th>
+                    <th>
+                        <strong>Titular</strong>
+                    </th>
+                    <th>
+                        <strong>Intermediario</strong>
+                    </th>
+                    <th>
+                        <strong>Remitente<br/>Comercial</strong>
+                    </th>
+                    <th>
+                        <strong>Corredor</strong>
+                    </th>
+                    <th>
+                        <strong>Destino</strong>
+                    </th>
+                    <th>
+                        <strong>Procedencia</strong>
+                    </th>
+                    <th>
+                        <strong>Patente</strong>
+                    </th>
+                    <th>
+                        <strong>Calidad</strong>
+                    </th>
+                    <th>
+                        <strong>Observaciones</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbody" class="table-ligth">
+ 
+            </tbody>
+        </table>
+    </div>-->
+    <script src="./index.js"></script>
+    <script src="./captura.js"></script>
+</body>
+</html>
